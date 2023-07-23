@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="durability.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Storage Durability Calculator</h1>
+    <form>
+      <div class="form-group">
+        <label for="dataShards">Number of data shards:</label>
+        <input type="number" id="dataShards" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="parityShards">Number of parity shards:</label>
+        <input type="number" id="parityShards" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="afr">Annual failure rate (in %):</label>
+        <input type="number" id="afr" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="rebuildTime">Rebuild time (in hours):</label>
+        <input type="number" id="rebuildTime" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="totalObjects">Total number of objects:</label>
+        <input type="number" id="totalObjects" class="form-control" required>
+      </div>
+      <button type="button" onclick="calculateDurability()" class="btn btn-primary">Calculate Durability</button>
+    </form>
+    <div id="output" class="mt-4"></div>
+  </div>
+</body>
+</html>
